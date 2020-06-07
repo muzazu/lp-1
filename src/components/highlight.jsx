@@ -17,7 +17,6 @@ export const HighlightItem = (props) => {
                 position: "relative",
                 padding: "24px 12px",
             }}
-            {...props}
         >
             <i
                 className={`fa fa-${icon}`}
@@ -25,7 +24,7 @@ export const HighlightItem = (props) => {
                     position: "absolute",
                     top: "12px",
                     right: "12px",
-                    fontSize: "24px",
+                    fontSize: "2em",
                     color: "#acadb7",
                 }}
             ></i>
@@ -112,12 +111,13 @@ export const Highlight = () => {
                             xs={1 / 1}
                             key={data.title}
                         >
-                            <HighlightItem
-                                title={data.title}
-                                desc={data.desc}
-                                icon={data.icon}
-                                css={{ margin: "8px" }}
-                            />
+                            <div css={{ margin: "8px" }}>
+                                <HighlightItem
+                                    title={data.title}
+                                    desc={data.desc}
+                                    icon={data.icon}
+                                />
+                            </div>
                         </FlexItem>
                     ))}
                 </FlexWrapper>

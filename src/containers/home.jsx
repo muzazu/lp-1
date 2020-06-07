@@ -4,6 +4,7 @@ import { CookiesConsent } from "../components/notifications"
 import { Hero } from "../components/hero"
 import { Highlight } from "../components/highlight"
 import { Footer } from "../components/footer"
+import { SlidingPanel } from "../components/sliding-panel"
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
                 <Hero />
                 <Highlight />
                 <Footer />
+                <SlidingPanel />
             </div>
         </Layout>
     )
