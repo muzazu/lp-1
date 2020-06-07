@@ -3,6 +3,7 @@ import { FlexWrapper, FlexItem } from "./flex"
 import { Button } from "./buttons"
 import { useTheme } from "emotion-theming"
 import { mq } from "../utils/media-query"
+import { Link } from "./link"
 
 /**
  * @component cookies
@@ -17,6 +18,7 @@ export const CookiesConsent = () => {
                 position: "sticky",
                 top: 0,
                 zIndex: 2,
+                borderBottom: "1px solid #999",
             }}
         >
             <FlexWrapper
@@ -29,9 +31,9 @@ export const CookiesConsent = () => {
                 <FlexItem m={7 / 8} s={1 / 1} xs={1 / 1}>
                     By accessing and using this website, you acknowledge that
                     you have read and understand our{" "}
-                    <a href="/">Cookie Policy</a>,{" "}
-                    <a href="/">Privacy Policy</a>, and our{" "}
-                    <a href="/">Terms of Service</a>.
+                    <Link href="#">Cookie Policy</Link>,{" "}
+                    <Link href="#">Privacy Policy</Link>, and our{" "}
+                    <Link href="#">Terms of Service</Link>.
                 </FlexItem>
                 <FlexItem
                     m={1 / 8}
