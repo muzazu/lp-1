@@ -10,7 +10,7 @@ import { Link } from "./link"
  */
 export const CookiesConsent = () => {
     const activeTheme = useTheme()
-    const [cookiesSeen, setCookiesSeen] = useState()
+    const [cookiesSeen, setCookiesSeen] = useState(true)
     const [notificationCSS, setNotificationCSS] = useState({
         padding: "20px",
         backgroundColor: `${activeTheme.colors.smokeGrey}`,
@@ -21,7 +21,7 @@ export const CookiesConsent = () => {
     })
 
     useEffect(() => {
-        setCookiesSeen(localStorage.getItem("cookiesSeen"))
+        setCookiesSeen(!!localStorage.getItem("cookiesSeen"))
     }, [])
 
     const handleUpdateSeen = () => {

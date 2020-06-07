@@ -45,7 +45,7 @@ export const Hero = () => {
                             left: "10%",
                             transform: "translate(-5%, -50%)",
                         },
-                        [mq(activeTheme.breakPoints.m)]: {
+                        [mq(activeTheme.breakPoints.s)]: {
                             left: "50%",
                             transform: "translate(-50%, -50%)",
                         },
