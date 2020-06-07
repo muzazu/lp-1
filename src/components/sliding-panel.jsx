@@ -30,7 +30,6 @@ export const SlidingPanel = () => {
         const currentDate = new Date()
         const diffTime = Math.abs(currentDate - storageDate)
         const diffMinutes = Math.ceil(diffTime / (1000 * 60))
-        console.log(diffMinutes)
         // hide sliding panel 
         if (diffMinutes < 10) {
             setIsHid(() => true)
