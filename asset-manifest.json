@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e8714c91.chunk.css",
+    "main.js": "/static/js/main.84d32afa.chunk.js",
+    "main.js.map": "/static/js/main.84d32afa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e861fc41.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e861fc41.js.map",
+    "static/js/2.432713aa.chunk.js": "/static/js/2.432713aa.chunk.js",
+    "static/js/2.432713aa.chunk.js.map": "/static/js/2.432713aa.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.132f725ddb464f008916ec05ea5a38f7.js": "/precache-manifest.132f725ddb464f008916ec05ea5a38f7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e8714c91.chunk.css.map": "/static/css/main.e8714c91.chunk.css.map",
+    "static/js/2.432713aa.chunk.js.LICENSE.txt": "/static/js/2.432713aa.chunk.js.LICENSE.txt",
+    "static/media/work-desk__dustin-lee.jpg": "/static/media/work-desk__dustin-lee.a5a74b4f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e861fc41.js",
+    "static/js/2.432713aa.chunk.js",
+    "static/css/main.e8714c91.chunk.css",
+    "static/js/main.84d32afa.chunk.js"
+  ]
+}
