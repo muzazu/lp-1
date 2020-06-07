@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { FlexWrapper, FlexItem } from "./flex"
 import { Button } from "./buttons"
 import { useTheme } from "emotion-theming"
@@ -10,17 +10,41 @@ import { Link } from "./link"
  */
 export const CookiesConsent = () => {
     const activeTheme = useTheme()
+    const [cookiesSeen, setCookiesSeen] = useState()
+    const [notificationCSS, setNotificationCSS] = useState({
+        padding: "20px",
+        backgroundColor: `${activeTheme.colors.smokeGrey}`,
+        position: "sticky",
+        top: 0,
+        zIndex: 2,
+        borderBottom: "1px solid #999",
+    })
+
+    useEffect(() => {
+        setCookiesSeen(localStorage.getItem("cookiesSeen"))
+    }, [])
+
+    const handleUpdateSeen = () => {
+        localStorage.setItem("cookiesSeen", "1")
+
+        // handle slide up effect notification
+        setNotificationCSS((state) => ({
+            ...state,
+            overflow: "hidden",
+            height: 0,
+            padding: 0,
+            transition: ".3s ease-out",
+        }))
+
+        setTimeout(() => {
+            setCookiesSeen(1)
+        }, 600)
+    }
+
+    if (cookiesSeen) return <></>
+
     return (
-        <div
-            css={{
-                padding: "20px",
-                backgroundColor: `${activeTheme.colors.smokeGrey}`,
-                position: "sticky",
-                top: 0,
-                zIndex: 2,
-                borderBottom: "1px solid #999",
-            }}
-        >
+        <div css={notificationCSS}>
             <FlexWrapper
                 css={{
                     maxWidth: "720px",
@@ -51,7 +75,9 @@ export const CookiesConsent = () => {
                         },
                     }}
                 >
-                    <Button color="blue">Got It</Button>
+                    <Button color="blue" onClick={() => handleUpdateSeen()}>
+                        Got It
+                    </Button>
                 </FlexItem>
             </FlexWrapper>
         </div>
