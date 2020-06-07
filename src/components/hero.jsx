@@ -20,9 +20,7 @@ export const Hero = () => {
         >
             <div
                 css={{
-                    background: activeTheme
-                        ? activeTheme.colors.darkBlue
-                        : "#007bc1",
+                    background: activeTheme.colors.darkBlue,
                     opacity: 0.6,
                     width: "100%",
                     height: "100vh",
