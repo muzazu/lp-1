@@ -7,6 +7,9 @@ export const GlobalStyles = () => {
     return (
         <Global
             styles={{
+                "*": {
+                    boxSizing: "border-box",
+                },
                 body: {
                     fontFamily: "Roboto,Helvetica,Arial,sans-serif",
                     background: activeTheme.colors.smokeGrey,

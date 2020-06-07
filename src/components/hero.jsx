@@ -41,9 +41,9 @@ export const Hero = () => {
                         top: "50%",
                         textAlign: "center",
                         color: "#fff",
-                        [mq(activeTheme.breakPoints.s)]: {
+                        [mq(activeTheme.breakPoints.xs)]: {
                             left: "10%",
-                            transform: "translate(-50%, -10%)",
+                            transform: "translate(-5%, -50%)",
                         },
                         [mq(activeTheme.breakPoints.m)]: {
                             left: "50%",
@@ -60,7 +60,18 @@ export const Hero = () => {
                     >
                         Hello! I'm Muhammad Zaid
                     </h2>
-                    <h3 css={{ margin: "0 0 12px", fontSize: "1.6em" }}>
+                    <h3
+                        css={{
+                            fontSize: "1.6em",
+                            lineHeight: "1.4",
+                            [mq(activeTheme.breakPoints.xs)]: {
+                                margin: "0 0 24px",
+                            },
+                            [mq(activeTheme.breakPoints.m)]: {
+                                margin: "0 0 12px",
+                            },
+                        }}
+                    >
                         Consult, Design, and Develop Websites
                     </h3>
                     <p css={{ margin: "0 0 8px" }}>
